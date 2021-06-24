@@ -1,0 +1,56 @@
+<form [formGroup]="PaymentForm" (ngSubmit)="onSubmit()">
+  <h3>Payment Details</h3>
+<br>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+
+      <label for="cardNo">Card Number:</label>
+      <input type="cardNo" class="form-control" formControlName="cardNo" id="cardNo" placeholder="Enter the Card Number"
+        name="cardNo" />
+      <span *ngIf="
+                !PaymentForm.get('cardNo').valid &&
+                PaymentForm.get('cardNo').touched
+              " class="help-block">Please enter the Card Number</span>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="name">Card Holder Name:</label>
+      <input type="name" class="form-control" formControlName="cardHolderName" id="name" required
+        placeholder="Enter the name" />
+      <span *ngIf="
+                !PaymentForm.get('cardHolderName').valid &&
+                PaymentForm.get('cardHolderName').touched
+              " class="help-block">Please enter name</span>
+    </div>
+
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="expiryMonth">Expiry Month:</label>
+      <input type="expiryMonth" class="form-control" formControlName="expiryMonth" id="expiryMonth"
+        placeholder="Enter the Expiry Month" name="expiryMonth" />
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="expiryYear">Expiry Year:</label>
+      <input type="expiryYear" class="form-control" formControlName="expiryYear" id="expiryYear"
+        placeholder="Enter the Expiry Year" name="expiryYear" />
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="cvvNo">CVV Number:</label>
+      <input type="cvvNo" class="form-control" formControlName="cvvNo" id="cvvNo" placeholder="Enter the CVV Number"
+        name="cvvNo" />
+      <br />
+      <span *ngIf="
+                !PaymentForm.get('cvvNo').valid &&
+                PaymentForm.get('cvvNo').touched
+              " class="help-block">Please enter the CVV Number</span>
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="conP">
+      Confirm Payment</button>
+    
+</form>

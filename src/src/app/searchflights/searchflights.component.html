@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-header">Search Flights</div>
+    <div class="card-body">
+        <form [formGroup]="SearchFlights" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="source">Enter Source:</label>
+                <input type="text" class="form-control" id="source" formControlName="source" placeholder="Enter Source"
+                    name="source" />
+                <span *ngIf="!SearchFlights.get('source').valid && SearchFlights.get('source').touched"
+                    class="help-block">Please enter source</span>
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Enter Destination:</label>
+                <input type="text" class="form-control" id="destination" formControlName="destination"
+                    placeholder="Enter Destination" name="destination" />
+                <span *ngIf="!SearchFlights.get('destination').valid && SearchFlights.get('destination').touched"
+                    class="help-block">Please enter destination</span>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Enter Date:</label>
+                <input type="date" class="form-control" id="date" formControlName="date" placeholder="Enter Date"
+                    name="date" />
+                <span *ngIf="!SearchFlights.get('date').valid && SearchFlights.get('date').touched"
+                    class="help-block">Please enter date</span>
+            </div>
+
+            <div class="form-group">
+                <label for="number">Enter Number of Passengers:</label>
+                <input type="number" class="form-control" id="number" formControlName="number"
+                    placeholder="Enter Number of Passengers" name="number" />
+                <span *ngIf="!SearchFlights.get('number').valid && SearchFlights.get('number').touched"
+                    class="help-block">Please enter number of Passengers</span>
+            </div>
+
+            <div class="form-group">
+                <label for="classtype"> Class Type: </label>
+                <select name="classtype" id="classtype" formControlName="classtype">
+
+                    <option value="Business">Business</option>
+                    <option value="Economy">Economy</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" (click)="onLoad()" >Search</button>
+        </form>
+
+    </div>
+</div>

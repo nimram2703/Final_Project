@@ -1,0 +1,36 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+  .help-block {
+    color: red;
+  }
+
+  form {
+    margin-left: 260px;
+    background-color: #d6bfa0a9;
+      width: 58%;
+    padding: 1em;
+    
+      margin-top: 75px;
+    display: inline-block;
+      border-radius: 15px;
+      font-family: "Raleway", sans-serif;
+    
+  }
+
+  button{
+    margin-left: 250px;
+  }
+
+  h2{
+    color: steelblue;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .form-group{
+    color: navy;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+  }
+  

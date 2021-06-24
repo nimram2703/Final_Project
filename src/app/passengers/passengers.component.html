@@ -1,0 +1,71 @@
+<div class="container">
+  <form [formGroup]="PassengerForm" (ngSubmit)="onSubmit()">
+    <h2>Passenger Details</h2>
+    <br>
+    <div class="row">
+      <div class="form-group col-md-8">
+        <label for="name">Your Name:</label>
+        <input type="name" class="form-control" id="name" formControlName="passengerName" placeholder="Enter Your Name"
+          name="name" />
+        <span *ngIf="!PassengerForm.get('passengerName').valid && PassengerForm.get('passengerName').touched"
+          class="help-block">Please enter your Name</span>
+
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="age">Age:</label>
+        <input type="age" class="form-control" id="age" formControlName="age" placeholder="Enter Your Age" name="age" />
+        <span *ngIf="!PassengerForm.get('age').valid && PassengerForm.get('age').touched"
+          class="help-block">Please enter your Age</span>
+      </div>
+    </div>
+
+    <div class="form-group col-md-12">
+      <label>Gender:</label>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
+
+        <label class="custom-control-label" for="customRadioInline1">Male</label>
+      </div>
+
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" />
+
+        <label class="custom-control-label" for="customRadioInline2">Female</label>
+      </div>
+
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
+
+        <label class="custom-control-label" for="customRadioInline3">Others</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="phoneNumber" class="form-control" formControlName="mobileNumber" id="phoneNumber"
+          placeholder="Enter Phone Number" name="phoneNumber" />
+        <span *ngIf="!PassengerForm.get('mobileNumber').valid && PassengerForm.get('mobileNumber').touched"
+          class="help-block">Please enter a Valid Phone Number</span>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="emailId">Email Id:</label>
+        <input type="email" class="form-control" formControlName="emailId" id="emailId" placeholder="Enter Email Id"
+          name="emailId" />
+        <span *ngIf="!PassengerForm.get('emailId').valid && PassengerForm.get('emailId').touched"
+          class="help-block">Please enter a Valid E-mail</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea class="form-control" rows="5" id="address" formControlName="address"
+        placeholder="Enter Your Address"></textarea>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-info">Submit</button>
+  </form>

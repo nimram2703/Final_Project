@@ -1,0 +1,38 @@
+<h1 class="text-center">Booking Information</h1>
+
+<table class="table-striped">
+  <thead class="thead-dark bg-info">
+    <tr>
+      <th scope="col">Booking Id</th>
+      <th scope="col">Booking Date</th>
+      <th scope="col">Booking Time</th>
+      <th scope="col">Booking Status</th>
+      <th scope="col">UserName</th>
+      <th scope="col">Flight Name</th>
+      <th scope="col">From Location</th>
+      <th scope="col">To Location</th>
+      <th scope="col">Departure Time</th>
+      <th scope="col">Arrival Time</th>
+      <th scope="col">Date Of Travel</th>
+      <th scope="col">Total Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">1</td>
+      <td>{{ bookingData.bookingDate }}</td>
+      <td>{{ bookingData.bookingTime }}</td>
+      <td>{{ bookingData.bookingStatus }}</td>
+      <td>{{ bookingData.bookieName }}</td>
+      <td>{{ bookingData.flightName }}</td>
+      <td>{{ bookingData.fromLocation }}</td>
+      <td>{{ bookingData.toLocation }}</td>
+      <td>{{ bookingData.departureTime }}</td>
+      <td>{{ bookingData.arrivalTime }}</td>
+      <td>{{ bookingData.bookingDate }}</td>
+      <td>{{ bookingData.price }}$</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Thank You for booking !!!!!</h2>

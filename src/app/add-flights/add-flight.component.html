@@ -1,0 +1,80 @@
+<div class="card">
+  <div class="card-header text-dark">Add Flights</div>
+  <div class="card-body">
+    <h3 *ngIf="isFlightAdded" style="color: green">Flight Added SuceessFully</h3>
+    <form [formGroup]="AddFlightsForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="flightname">Flight Name:</label>
+        <input type="flightname" class="form-control" id="flightname" formControlName="flightname"
+          placeholder="Enter Flight Name" name="flightName" />
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <label for="fromcity">From City:</label>
+          <input type="fromcity" class="form-control" formControlName="fromcity" placeholder="Enter From city"
+            name="fromcity" id="fromcity" />
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="tocity">To City:</label>
+          <input type="tocity" class="form-control" formControlName="tocity" placeholder="Enter To city" name="toCity"
+            id="tocity" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <label for="arrivaltime">Arrival Time:</label>
+          <input type="time" class="form-control" formControlName="arrivaltime" id="arrivaltime"
+            placeholder="Enter Arrival time" name="arrivaltime" />
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="departurtime">Departure Time:</label>
+          <input type="time" class="form-control" formControlName="departuretime" id="departuretime"
+            placeholder="Enter Departure time" name="departuretime" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <label for="travelDuration">Travel Duration:</label>
+          <input type="travelduration" class="form-control" formControlName="travelduration" id="number"
+            placeholder="Enter travel duration" name="number" />
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="date">Date:</label>
+          <input type="date" class="form-control" formControlName="date" id="date" placeholder="Enter Date "
+            name="date" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="classtype">Class Type:</label>
+        <select class="form-control" id="classtype" formControlName="classtype" value="Select">
+          <option>Business Class</option>
+          <option>EconomyClass</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <label for="price">Price:</label>
+          <input type="price" class="form-control" formControlName="price" id="price" placeholder="Enter price"
+            name="price" />
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="noOfSeats">No. of Seats:</label>
+          <input type="number" class="form-control" formControlName="noOfSeats" id="noOfSeats" name="noOfSeats" />
+        </div>
+      </div>
+      <div class="float-right">
+        <button type="submit" style="margin-right: 50px" class="btn btn-info">Save</button>
+        <button type="reset" class="btn btn-info">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+<div class="container">
+  <div class="card">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="panel-title">Registration Form</h1><br>
+          <h3 *ngIf="isRegistered" style="color: green">User Registered Successfully</h3>
+        </div>
+          <div class="panel-body">
+  
+            <form role="form" [formGroup]="RegistrationForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="username">User Name:</label>
+                <input
+                type="text"
+                class="form-control"
+                id="userName"
+                formControlName="userName"
+                placeholder="Enter Username"
+                name="userName"/>
+                <span *ngIf="!RegistrationForm.get('userName').valid && RegistrationForm.get('userName').touched" class="help-block">Please enter username</span>
+              </div>
+              
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input
+                type="password"
+                class="form-control"
+                formControlName="password"
+                placeholder="Enter password"
+                name="password"
+                id="password"/>
+                <span *ngIf="!RegistrationForm.get('password').valid && RegistrationForm.get('password').touched" class="help-block">Password should be of 8 digits</span>
+              </div>
+              
+              <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="firstname">First Name:</label>
+                <input
+                type="firstname"
+                class="form-control"
+                formControlName="firstName"
+                id="firstname"
+                placeholder="Enter First name"
+                name="firstName"/>
+                <span *ngIf="!RegistrationForm.get('firstName').valid && RegistrationForm.get('firstName').touched" class="help-block">Please enter your First name</span>
+              </div>
+              
+              <div class="col-sm-6 form-group">
+                <label for="lastname">Last Name:</label>
+                <input
+                type="lastname"
+                class="form-control"
+                formControlName="lastName"
+                id="lastName"
+                placeholder="Enter Last name"
+                name="lastName"/>
+                <span *ngIf="!RegistrationForm.get('lastName').valid && RegistrationForm.get('lastName').touched" class="help-block">Please enter your Last name</span>
+              </div>
+              </div>
+        
+              <div class="form-group">
+                <label for="email">Email Id:</label>
+                <input
+                type="email"
+                class="form-control"
+                formControlName="emailId"
+                id="emailId"
+                placeholder="Enter Email Id"
+                name="emailId"/>
+               <span *ngIf="!RegistrationForm.get('emailId').valid && RegistrationForm.get('emailId').touched" class="help-block">Please enter a valid E-Mail Id</span>
+              </div>
+              
+              <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="phoneno">Phone Number:</label>
+                <input
+                type="phoneno"
+                class="form-control"
+                formControlName="phoneNumber"
+                id="phoneNumber"
+                placeholder="Enter Phone Number"
+                name="phoneNumber"/>
+                <span *ngIf="!RegistrationForm.get('phoneNumber').valid && RegistrationForm.get('phoneNumber').touched" class="help-block">Please enter a valid Phone number</span>
+              </div>
+  
+              <div class="col-sm-6 form-group">
+                <label for="dob">Date of Birth:</label>
+                <input
+                type="date"
+                class="form-control"
+                formControlName="dateOfBirth"
+                id="dateOfBirth"
+                placeholder="Enter Date of Birth"
+                name="dateOfBirth"/>
+                <span *ngIf="!RegistrationForm.get('dateOfBirth').valid && RegistrationForm.get('dateOfBirth').touched" class="help-block">Please enter the Date Of Birth</span>
+              </div>
+              </div>
+  
+              <div class="form-group">
+                <label for="gender">Gender:   </label>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                  type="radio"
+                  id="customRadioInline1"
+                  name="customRadioInline1"
+                  class="custom-control-input"/>
+                  <label class="custom-control-label" for="customRadioInline1">Male</label>
+                  </div>
+  
+                  <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                  type="radio"
+                  id="customRadioInline2"
+                  name="customRadioInline1"
+                  class="custom-control-input"/>
+                  <label class="custom-control-label" for="customRadioInline2">Female</label>
+                  </div>
+  
+                  <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                  type="radio"
+                  id="customRadioInline3"
+                  name="customRadioInline1"
+                  class="custom-control-input"/>
+                  <label class="custom-control-label" for="customRadioInline3">Others</label>
+                  </div>
+              </div>
+  
+    
+              <button class="btn btn-block btn-primary" style="margin-right: 30px; text-align: center;" type="submit" name="button">
+              <div *ngIf="showLoading" class="spinner-border text-success"></div>
+              &nbsp;&nbsp;
+              <span *ngIf="showLoading">Loading...</span>
+              Register
+              <!-- <span *ngIf="!showLoading">Register</span>-->
+              </button>
+              <br>
+              <a (click)="onLoad()" style="color: blue;">
+              Click here to login
+              </a>
+              <br>
+            </form><br>
+          </div>
+      </div>
+  
+  </div>
+  </div>

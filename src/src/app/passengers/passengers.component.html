@@ -1,0 +1,69 @@
+<form [formGroup]="PassengerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="name" class="form-control" id="name" formControlName="name" placeholder="Enter Your Name"
+            name="name" />
+
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="age" class="form-control" id="age" formControlName="age" placeholder="Enter Your Age" name="age" />
+
+    </div>
+
+
+    <div class="form-group">
+        <label>Gender:</label>
+        <div class="custom-control custom-radio custom-control-inline">
+
+            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+
+            <label class="custom-control-label" for="customRadioInline1">Male</label>
+
+        </div>
+
+        <div class="custom-control custom-radio custom-control-inline">
+
+            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+
+            <label class="custom-control-label" for="customRadioInline2">Female</label>
+
+        </div>
+
+        <div class="custom-control custom-radio custom-control-inline">
+
+            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+
+            <label class="custom-control-label" for="customRadioInline3">Others</label>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea class="form-control" rows="5" id="address" formControlName="address"
+            placeholder="Enter Your Address"></textarea>
+    </div>
+
+
+
+    <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="phoneNumber" class="form-control" formControlName="phoneno" id="phoneNumber"
+            placeholder="Enter Phone Number" name="phoneNumber" />
+    </div>
+
+    <div class="form-group">
+        <label for="emailId">Email Id:</label>
+        <input type="email" class="form-control" formControlName="email" id="emailId" placeholder="Enter Email Id"
+            name="emailId" />
+    </div>
+
+
+
+    <button type="submit" class="btn btn-info" (click)="onLoad()">Submit</button>
+</form>

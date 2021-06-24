@@ -1,0 +1,32 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+
+.help-block {
+    color: red;
+  }
+
+  form{
+    width: 48%;
+    margin-left: 300px;
+    background-color: #d6bfa0a9;
+    padding: 1em;
+    margin-top: 150px;
+    display: inline-block;
+    border-radius: 15px;
+    font-family: "Raleway", sans-serif;
+    }
+
+h3{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: midnightblue;
+  text-align: center;
+  font-size: 25px;
+}
+
+.form-group{
+  color: darkred;
+  font-size: 15px;
+}
+    
+   

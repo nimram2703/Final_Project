@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    background-image: url("https://www.outlookindia.com/outlooktraveller/public/uploads/articles/travelnews/Main_10.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
